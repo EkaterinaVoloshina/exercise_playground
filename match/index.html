@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <h1>Какое слово?</h1>
+    <h2>Инструкция: соедините части конструкций</h2>
+		
+	<main class="container">
+    <div>
+      <ul class="draggable-list">
+        <li id="e1" draggable="true">распределение</li>
+        <li id="e2" draggable="true">номинальная</li>
+        <li id="e3" draggable="true">импорт</li>
+        <li id="e4" draggable="true">населенный</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="draggable-list">
+        <li id="s2" draggable="true">ставка</li>
+        <li id="s1" draggable="true">инвестиций</li>
+        <li id="s3" draggable="true">товаров</li>
+        <li id="s4" draggable="true">пункт</li>
+      </ul>
+    </div>
+  </main>
+
+  <div id="endMessage">
+    <h3>Все верно!</h3>
+  </div>
+
+    <button onclick="playAgain()">Play Again</button>
+  </div>
+
+  <script src="src/script.js"></script>
+</body>
+</html>

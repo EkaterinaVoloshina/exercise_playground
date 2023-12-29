@@ -1,0 +1,24 @@
+body {
+  padding: 40px;
+}
+h2 {
+  margin-bottom: 50px;
+}
+#jumbledWordsWrapper span {
+  border: 2px dashed black;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  padding: 10px 10px;
+  margin: 0 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;  
+}
+#orderedWordsWrapper span {
+  background: #abcdef;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 50px;
+}

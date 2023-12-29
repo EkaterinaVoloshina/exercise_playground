@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <h1>Какое слово?</h1>
+    <h2>Инструкция: поставьте слова в нужной форме.</h2>
+	<script src="src/script.js"></script>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'>    </script>
+           <script type="text/javascript">
+           $(document).ready(function(){
+            $("input").not( $(":button") ).keypress(function (evt) {
+             if (evt.keyCode == 13) { 
+              iname = $(this).val(); 
+              if (iname !== 'Submit'){
+               var fields = $(this).parents('form:eq(0),body').find('button,input,textarea,select');
+               var index = fields.index( this );
+               if ( index > -1 && ( index + 1 ) < fields.length ) {
+                 fields.eq( index + 1 ).focus();
+               } 
+               return false 
+             } 
+           } 
+         }); 
+          });</script>
+       <script type="text/javascript" src="prolinguis-gap-filler.js"></script>
+	   <div style="font-family:Helvetica; font-size: 18px; vertical-align:bottom; color:#3e2e41; margin:16px 0;"> Score: <label id="label_score">0%</label></div>
+
+        <form class="game-form" style="padding: 0px; width: 100%; margin: 10px auto;" >
+
+          
+            <div class="game-hold" style="width: 100%; text-align: left; display: inline-block;">
+				<p class="question">Question 1</p>
+				<p>Кто принимает на себя
+ <input TYPE="text" id="ctr1" onBlur="validate(this.value, this.id)" class="user_input"></input> <input TYPE="text" id="ctr2" onBlur="validate(this.value, this.id)" class="user_input"></input> (<b>риск, дефолт</b>) в этом случае?</p>
+            </div>
+
+            <div class="game-hold" style=" width: 100%; text-align: left; display: inline-block;">
+
+                <p class="question">Question 2</p>
+                <p>Исходя из этого, следует подчеркнуть важность модернизации и диверсификации экономики и необходимость ее интенсивного развития, что во многом зависит от <input TYPE="text" id="ctr3" onBlur="validate(this.value, this.id)" class="user_input"></input> (<b>состояние</b>) основных средств предприятий и производственного сектора в целом. </p>
+            </div>
+
+        </form>
+				
+	  </body>
+</html>
